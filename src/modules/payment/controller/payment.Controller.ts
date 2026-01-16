@@ -1,5 +1,5 @@
-import { listSpecificPaymentService } from '@modules/payment/service/listSpecificPayment.service';
-import { listOrdersPaymentService } from '@modules/payment/service/listOrdersPayment.service';
+import { ListSpecificPaymentService } from '@modules/payment/service/listSpecificPayment.service';
+import { ListOrdersPaymentService } from '@modules/payment/service/listOrdersPayment.service';
 import { CreatePaymentService } from '@modules/payment/service/createPayment.service';
 import { UpdatePaymentService } from '@modules/payment/service/updatePayment.service';
 import { Body, Controller, Get, Post, Put, Query } from '@nestjs/common';
@@ -10,8 +10,8 @@ export class PaymentController {
   constructor(
     private createPaymentService: CreatePaymentService,
     private updatePaymentService: UpdatePaymentService,
-    private listSpecificPaymentService: listSpecificPaymentService,
-    private ListOrdersPaymentService: listOrdersPaymentService
+    private listSpecificPaymentService: ListSpecificPaymentService,
+    private listOrdersPaymentService: ListOrdersPaymentService,
   ) {}
 
   @Post()
@@ -33,7 +33,7 @@ export class PaymentController {
   @Get()
   async ListOrdersPayment(@Body() body: payment.IPaymentDTO) {
     const { cpf, paymentMethod } = body;
-    return await this.ListOrdersPaymentService.execute(cpf, paymentMethod);
+    return await this.listOrdersPaymentService.execute(cpf, paymentMethod);
   }
 
 }

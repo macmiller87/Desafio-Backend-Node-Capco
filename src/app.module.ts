@@ -1,8 +1,8 @@
-import { listSpecificPaymentService } from '@modules/payment/service/listSpecificPayment.service';
+import { ListSpecificPaymentService } from '@modules/payment/service/listSpecificPayment.service';
 import { CreatePaymentService } from '@modules/payment/service/createPayment.service';
 import { UpdatePaymentService } from '@modules/payment/service/updatePayment.service';
 import { PaymentController } from '@modules/payment/controller/payment.Controller';
-import { listOrdersPaymentService } from '@modules/payment/service/listOrdersPayment.service';
+import { ListOrdersPaymentService } from '@modules/payment/service/listOrdersPayment.service';
 import { DatabaseModule } from '@utils/database/database.module';
 import { ConfigModule } from '@nestjs/config';
 import { Module } from '@nestjs/common';
@@ -13,8 +13,8 @@ import { Module } from '@nestjs/common';
   providers: [
     CreatePaymentService,
     UpdatePaymentService,
-    listSpecificPaymentService,
-    listOrdersPaymentService
+    ListSpecificPaymentService,
+    ListOrdersPaymentService,
   ]
 })
 

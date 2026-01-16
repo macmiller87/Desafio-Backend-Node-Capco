@@ -4,7 +4,7 @@ import { AppError } from "@utils/errors/appError";
 import { Injectable } from "@nestjs/common";
 
 @Injectable()
-export class listOrdersPaymentService {
+export class ListOrdersPaymentService {
 
     constructor(private paymentModel: IPaymentModel) {}
 
