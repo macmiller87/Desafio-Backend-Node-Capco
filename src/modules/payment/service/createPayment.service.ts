@@ -44,19 +44,22 @@ export class CreatePaymentService {
 
     }else {
 
-      if(paymentMethod === "CREDIT_CARD" || paymentMethod === "Credit_Card") {
+      // This section would then proceed to implement the integration with the Mercado Pago API. 
+      // Essa parte seguiria para implementar a integração com a API do mercado pago.
 
-        const defaultPaymentMethod = "CREDIT_CARD";
+      // if(paymentMethod === "CREDIT_CARD" || paymentMethod === "Credit_Card") {
 
-        const createPayment = await this.paymentModel.createPayment({
-          cpf,
-          description,
-          amount,
-          paymentMethod: defaultPaymentMethod,
-        });
+      //   const defaultPaymentMethod = "CREDIT_CARD";
 
-        return createPayment;
-      }
+      //   const createPayment = await this.paymentModel.createPayment({
+      //     cpf,
+      //     description,
+      //     amount,
+      //     paymentMethod: defaultPaymentMethod,
+      //   });
+
+      //   return createPayment;
+      // }
 
     }
     
