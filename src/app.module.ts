@@ -1,11 +1,21 @@
-import { Module } from '@nestjs/common';
+import { listSpecificPaymentService } from '@modules/payment/service/listSpecificPayment.service';
+import { CreatePaymentService } from '@modules/payment/service/createPayment.service';
+import { UpdatePaymentService } from '@modules/payment/service/updatePayment.service';
+import { PaymentController } from '@modules/payment/controller/payment.Controller';
+import { listOrdersPaymentService } from '@modules/payment/service/listOrdersPayment.service';
+import { DatabaseModule } from '@utils/database/database.module';
 import { ConfigModule } from '@nestjs/config';
-import { AppController } from './controller/app.controller';
-import { AppService } from './service/app.service';
+import { Module } from '@nestjs/common';
 
 @Module({
-  imports: [ConfigModule.forRoot()],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [DatabaseModule, ConfigModule.forRoot()],
+  controllers: [PaymentController],
+  providers: [
+    CreatePaymentService,
+    UpdatePaymentService,
+    listSpecificPaymentService,
+    listOrdersPaymentService
+  ]
 })
+
 export class AppModule {}

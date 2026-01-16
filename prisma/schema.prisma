@@ -9,7 +9,7 @@ datasource db {
 
 model Payment {
   id            String        @id @default(uuid())
-  cpf           String        @unique
+  cpf           String
   description   String
   amount        Float
   paymentMethod paymentMethod @default(PIX)
