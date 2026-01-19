@@ -28,7 +28,7 @@
 - For running application in Docker container you should have docker installed on your system.
 
 - Copy the url of this repo in tab `< > CODE`, and running in terminal .... `git clone "link...."`
-- Go to project folder .... `cd Desafio-Backend-Node-Capco
+- Go to project folder .... `cd Desafio-Backend-Node-Capco`
 - Install dependencies .... `npm install` or `yarn install`, depends on the installed package manager.
 - You will need to create a `.env` file on `root` of this application, and copy the environment variables that is in `.env.example` of this application.  
 
