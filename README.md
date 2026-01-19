@@ -28,12 +28,12 @@
 - For running application in Docker container you should have docker installed on your system.
 
 - Copy the url of this repo in tab `< > CODE`, and running in terminal .... `git clone "link...."`
-- Go to project folder .... `cd Solvd-Employee-Leave-Management`
+- Go to project folder .... `cd Desafio-Backend-Node-Capco
 - Install dependencies .... `npm install` or `yarn install`, depends on the installed package manager.
 - You will need to create a `.env` file on `root` of this application, and copy the environment variables that is in `.env.example` of this application.  
 
 - After following check the steps above, you can running the application with the follow comand `yarn dc:up`.
-- Since the containers on `docker are running`, Open a second tab on your terminal and make sure to do the set-up of `prisma` and `postgres`, you will need to run this command on your terminal `yarn setup:prisma`, so you can test the end-points of the application.
+- Since the containers on `docker are running`, Open a second tab on your terminal and make sure to do the set-up of `prisma` and `postgres`, you will need to run this command on your terminal, only the first time `yarn setup:prisma`, so you can test the end-points of the application.
 - For stop and remove containers, you can use the follow comand `yarn dc:down`.
 
 ### 🛠️🚀 To run the Prisma Database Visualization Interface tool
